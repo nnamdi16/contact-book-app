@@ -1,0 +1,104 @@
+React eliminates a lot of friction in building a user interface. UI is declared with encapsulated components that manage their own state then compose the pieces together into a full application. React's declarative, composition and unidirectional nature.
+
+What makes react Unique or Great:
+- The way data flows from parent to child.
+-React is really just javascript
+-Compositional model: combining simple functions together to create complex functions. Each function is a simple building block that does one thing. It makes use of the power of composition, heavily. It builds up pieces of a UI using components.
+-Declarative nature: YOu declare the state in the mark up while react does the imperative work of keeping the DOM async with your work.
+
+Imperative code, you tell javascript what to do and how to do.
+Declarative code we don't code up all the result to get the end result. We tell Javascript what we want to be done, allowing javascript to take care of performing the steps.
+-The way data flows through a component
+
+Difference between React and Javascript: Instead of composing functions to get some data, you are composing functions to get some UI.
+
+Data flows unidirectionally from Parent to children.
+Virtual DOM are objects that describes real DOM nodes.
+
+Props allows you pass data or attributes from parent component to child components. It represents read-only data that are immutable.
+Functional components which are an alternative way to create components
+Controlled components which allow you to hook up the forms in your application to your component state.
+
+In react your UI is a function of your state.
+A component state represents mutable data that ultimately affects what is rendered on the page. It is managed internally by the component itself and is meant to change over time.
+PropTypes is a package that lets us define the data type we want to see right from the get-go and warn us during development if the prop that's passed to the component doesn't match what is expected.
+
+
+
+
+
+Phases of React 
+-Initialisation
+-Reconciliation: determining what has changed from the previous output and the new input
+PropTypes is a package that lets us define the data type we want to see right from the get-go and warn us during development if the prop that's passed to the component doesn't match what is expected.
+
+Controlled components :components which render a form, but the source of truth for that form state lives inside of the component state rather than inside of the DOM
+
+-Allows instant input validation
+-Conditionally disable/ enable buttons
+-Enforce input formats.
+
+Virtual DOM: reflects a tree in which each node is an HTML element. 
+Drifting algorithm: refers to making efficient changes to the DOM. Old DOM nodes are taken out and replaced only when necessary.
+
+A prop is any data that you pass to the React Component
+Component state represents mutable data that affects what is rendered on the page.
+State is managed internally by the components itself and it is meant to change over time.
+React compares the previous output and new output, determines what has changed, and makes these decisions for us. This process of determining what has changed in the previous and new outputs is called Reconciliation.
+
+Because it is React that ultimately controls the value of our input form element, we consider this component a Controlled Component.
+
+Controlled Components allow you to update your UI based on the form itself.
+Controlled components refer to components that render a form, but the "source of truth" for that form state lives inside of the component state rather than inside of the DOM. The benefits of Controlled Components are:
+
+instant input validation
+conditionally disable/enable buttons
+enforce input formats.
+
+
+Lifecycle Events are special methods each components can have that allow us to hook into the views when specified conditions happen
+Lifecycle Events
+Lifecycle events are specially named methods in a component. These methods are automatically bound to the component instance, and React will call these methods naturally at certain times during the life of a component. There are a number of different lifecycle events, but here are the most commonly used ones.
+
+componentWillMount()
+
+invoked immediately before the component is inserted into the DOM and should be used if you're fetching remote data or doing an Ajax request
+
+componentDidMount()
+
+invoked immediately after the component is inserted into the DOM
+
+componentWillUnmount()
+
+invoked immediately before a component is removed from the DOM
+
+componentWillReceiveProps()
+
+invoked whenever the component is about to receive brand new props
+
+To use one of these, you'd just create a method in your component with the name and React will call it. It's an easy way to hook into different parts of the lifecycle of React components.
+
+Adding to the DOM
+These lifecycle events are called when a component is being added to the DOM:
+
+constructor()
+componentWillMount()
+render()
+componentDidMount()
+
+Re-rendering
+These lifecycle events are called when a component is re-rendered to the DOM:
+
+componentWillReceiveProps()
+shouldComponentUpdate()
+componentWillUpdate()
+render()
+componentDidUpdate()
+
+Removing from the DOM:
+This lifecycle event is called when a component is being removed from the DOM
+
+componentWillUnmount()
+It's easier to tell where all of these fit together with the following graphic:
+
+React Router provides a Link component which allows you to add declarative, accessible navigation around your application
